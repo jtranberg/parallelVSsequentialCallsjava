@@ -33,12 +33,26 @@ function changeBodyColor(color, delay) {
     }, delay);
 });
 }
-async function lightShow(){
-    await changeBodyColor('teal', 1000);
-    await changeBodyColor('red', 1000);
-    await changeBodyColor('blue', 1000);
-    await changeBodyColor('green', 1000);
-    await changeBodyColor('violet', 1000);
+// async function lightShow(){
+//     await changeBodyColor('teal', 1000);
+//     await changeBodyColor('red', 1000);
+//     await changeBodyColor('blue', 1000);
+//     await changeBodyColor('green', 1000);
+//     await changeBodyColor('violet', 1000);
+// }
+async function lightShow() {                     //so fast all you see is last color, no delay
+    const p1 = changeBodyColor('teal', 1000);
+    const p2 =  changeBodyColor('red', 1000);
+    const p3 =  changeBodyColor('blue', 1000);
+    const p4 =  changeBodyColor('blue', 1000);
+    const p5 =  changeBodyColor('green', 1000);
+    const p6 =  changeBodyColor('violet', 1000);
+    await p1;
+    await p2;
+    await p3;
+    await p4;
+    await p5;
+    await p6;
 }
 lightShow();
 
